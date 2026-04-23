@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: deployment
+Metadata:
+  name: myweb
+spec:
+  replicas: 5
+  selector:
+   matchLabels:
+    app: frontend
+  template:
+   metadata:
+    labels:
+     app: frontend
+   spec:
+    containers:
+     - name: nginx
+       image:  ubuntu/nginx
+       imagePullPolicy: Always
+       ports:
+        - containerport: 80
+
+
