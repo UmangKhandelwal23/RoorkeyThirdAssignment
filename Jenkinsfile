@@ -29,7 +29,7 @@ pipeline {
                 sh 'kubectl delete -f deployment.yml || true'
                 sh 'kubectl delete -f service.yml || true'
                 sh 'kubectl apply -f deployment.yml'
-                sh 'kubectly apply -f service.yml'
+                sh 'kubectl apply -f service.yml'
             }
         }
     }
