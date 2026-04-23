@@ -13,14 +13,14 @@ pipeline {
         }
         stage('docker build') {
             steps {
-                sh'sudo docker build -t umangkhandelwal/roorkeythird:v1 .'
+                sh'sudo docker build -t umangkhandelwal/roorkeythird:v2 .'
             }
         }
         stage('Docker Push') {
             steps {
                 sh '''
                 echo "$DOCKERHUB_CREDENTIALS_PSW" | docker login -u "$DOCKERHUB_CREDENTIALS_USR" --password-stdin
-                docker push umangkhandelwal/roorkeythird:v1
+                docker push umangkhandelwal/roorkeythird:v2
                 '''
             }
         }

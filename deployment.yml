@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: deployment
-Metadata:
+metadata:
   name: myweb
 spec:
   replicas: 5
@@ -14,7 +14,7 @@ spec:
    spec:
     containers:
      - name: nginx
-       image:  ubuntu/nginx
+       image: umangkhandelwal/roorkeythird:v2
        imagePullPolicy: Always
        ports:
         - containerport: 80
