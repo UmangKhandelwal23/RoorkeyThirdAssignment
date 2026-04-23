@@ -17,6 +17,6 @@ spec:
        image: umangkhandelwal/roorkeythird:v2
        imagePullPolicy: Always
        ports:
-        - containerport: 80
+        - containerPort: 80
 
 
